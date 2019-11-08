@@ -12,8 +12,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
 
+// make the directory "public" static and available for public view
 app.use(express.static("public"));
 
+// set pug as view engine
 app.set("view engine", "pug");
 
 app.get("/", (req, res) => {
